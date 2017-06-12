@@ -74,7 +74,8 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", inline: "grep -q -F 'setxkbmap de' /home/ubuntu/.profile || echo 'setxkbmap de' >> /home/ubuntu/.profile"
    
    # Target-Agent build packages
-   config.vm.provision "shell", inline: "sudo apt-get -y install autoconf automake eclipse-cdt cmake-qt-gui"
+   config.vm.provision "shell", inline: "sudo apt-get -y install autoconf automake eclipse-cdt cmake-qt-gui build-essential git gdb"
+   
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
