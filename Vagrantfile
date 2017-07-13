@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.2.4"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -58,24 +58,30 @@ Vagrant.configure("2") do |config|
    vb.memory = "4096"
 
    # Install xfce and virtualbox additions
-  
+
    # Set default password
    config.vm.provision "shell", inline: "echo ubuntu:ubuntuPW | sudo chpasswd "
-   
+
    config.vm.provision "shell", inline: "sudo apt-get update"
-   
+
    # Install XFCE4 as window system with lightdm and auto-login and gnome-terminal
    config.vm.provision "shell", inline: "sudo apt-get -y install xfce4"
    config.vm.provision "shell", inline: "sudo apt-get -y install lightdm"
-   config.vm.provision "shell", inline: "sudo echo -e \"[SeatDefaults]\nuser-session=xfce\nautologin-user=ubuntu\nautologin-user-timeout=0\nautologin-session=xfce\n\" > /etc/lightdm/lightdm.conf.d/50-xfce4.conf" 
+   config.vm.provision "shell", inline: "sudo echo -e \"[SeatDefaults]\nuser-session=xfce\nautologin-user=ubuntu\nautologin-user-timeout=0\nautologin-session=xfce\n\" > /etc/lightdm/lightdm.conf.d/50-xfce4.conf"
    config.vm.provision "shell", inline: "sudo apt-get -y install gnome-terminal"
-   
+
    # Default keyboard layout German
    config.vm.provision "shell", inline: "grep -q -F 'setxkbmap de' /home/ubuntu/.profile || echo 'setxkbmap de' >> /home/ubuntu/.profile"
-   
+
    # Target-Agent build packages
    config.vm.provision "shell", inline: "sudo apt-get -y install autoconf automake eclipse-cdt cmake-qt-gui build-essential git gdb"
-   
+
+   # Client/Server infrastructure for Musicplayer Application
+   config.vm.provision "shell", inline: "sudo apt-get -y install nodejs npm nodejs-legacy firefox gedit"
+
+   # set display resolution
+   config.vm.provision "shell", inline: "sudo xrandr -s 1920x976"
+      
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
