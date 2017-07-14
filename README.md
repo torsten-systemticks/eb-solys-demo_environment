@@ -24,13 +24,13 @@ Goto Download older versions and select version 1.9.5
 ### Run the demo app
 
 * Run the server
-** Open a shell 
-** cd /home/ubuntu/franca-musicplayer-example/org.franca.examples.musicplayer/server_nodejs
-** sudo node index.js
+  * Open a shell 
+  * cd /home/ubuntu/franca-musicplayer-example/org.franca.examples.musicplayer/server_nodejs
+  * sudo node index.js
 
 * Run the client
-** Open firefox
-** Enter "localhost:8180" as URL
+  * Open firefox
+  * Enter "localhost:8180" as URL
 
 ### Troubleshooting
 
