@@ -20,9 +20,8 @@ Goto Download older versions and select version 1.9.5
 
 * Clone or (download and extract) this git repository into a folder of your choice
 * Open a shell/commmand line and move to this folder then
-* Run vagrant up
+* Run "vagrant up && vagrant reload"
 * The very first installation could take some minutes, since the virtual machine is built from scratch
-* If the virtual machine does not start up in GUI mode, just ender "vagrant reload"
 
 ### Run the demo app
 
