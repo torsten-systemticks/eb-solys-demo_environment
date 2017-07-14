@@ -79,9 +79,15 @@ Vagrant.configure("2") do |config|
    # Client/Server infrastructure for Musicplayer Application
    config.vm.provision "shell", inline: "sudo apt-get -y install nodejs npm nodejs-legacy firefox gedit"
 
+   config.vm.provision "file", source: "unversioned", destination: "/home/ubuntu/"
+
    # set display resolution
-   config.vm.provision "shell", inline: "sudo xrandr -s 1920x976"
-      
+   # config.vm.provision "shell", inline: "sudo git clone https://github.com/kbirken/franca-musicplayer-example"
+   config.vm.provision :shell, path: "install_dep.sh"
+
+  # config.vm.provision "file", source: "start_app.sh", destination: "/home/ubuntu/start_app.sh"
+
+
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
