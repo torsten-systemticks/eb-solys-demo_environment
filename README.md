@@ -27,13 +27,18 @@ Goto Download older versions and select version 1.9.5
 
 * Run the virtual machine with "vagrant up" if not already running
 * Run the server
-  * Open a shell 
+  * Open a shell
   * cd /home/ubuntu/franca-musicplayer-example/org.franca.examples.musicplayer/server_nodejs
   * sudo node index.js
 
 * Run the client
   * Open firefox
   * Enter "localhost:8180" as URL
+  * Enter a title and press "Find"
+
+You finally should see s.th. like this:
+
+![Alt text](/doc/vm_screenshot.png?raw=true "Screenshot from application")
 
 ### Troubleshooting
 
@@ -42,6 +47,3 @@ In that case you need to set it manually.
 
 * Open a shell and type "xrandr -q" which lists all supported display resolutions
 * Look for the one in the list marked with "+" (usually the first in the list) and set it, with e.g. xrandr -s 1920x976
-
-
-
