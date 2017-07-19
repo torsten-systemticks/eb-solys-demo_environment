@@ -9,8 +9,6 @@ https://www.virtualbox.org/wiki/Downloads
 https://www.vagrantup.com/downloads.html
 Goto Download older versions and select version 1.9.5
 
-### Download and install EB solys
-
 ### Install required vagrant plug-ins
 * open a command line and install following plugins, with:
 * vagrant plugin install vagrant-hosts
@@ -24,6 +22,8 @@ Goto Download older versions and select version 1.9.5
 * Open a shell/commmand line and move to this folder then
 * Run "vagrant up && vagrant reload"
 * The very first installation could take some minutes, since the virtual machine is built from scratch
+
+### Download and install EB solys
 
 ### Run the demo app
 
