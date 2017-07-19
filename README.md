@@ -31,6 +31,11 @@ Goto Download older versions and select version 1.9.5
   * cd /home/ubuntu/franca-musicplayer-example/org.franca.examples.musicplayer/server_nodejs
   * sudo node index.js
 
+* Run the target agent
+  * Open a shell
+  * cd /home/ubuntu/ta/install
+  * sudo ./solys-agent
+
 * Run the client
   * Open firefox
   * Enter "localhost:8180" as URL
