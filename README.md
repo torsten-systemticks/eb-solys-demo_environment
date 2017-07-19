@@ -45,6 +45,13 @@ You finally should see s.th. like this:
 
 ![Alt text](/doc/vm_screenshot.png?raw=true "Screenshot from application")
 
+### Connect with EB solys
+
+* Launch EB solys
+* Add a new connection with IP = *192.168.2.4* and Port *1234*
+* connect
+* Open, e.g. trace.logfjs.*
+
 ### Troubleshooting
 
 In some cases the display resolution cannot be set automatically.
