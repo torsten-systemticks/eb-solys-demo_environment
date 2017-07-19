@@ -9,6 +9,8 @@ https://www.virtualbox.org/wiki/Downloads
 https://www.vagrantup.com/downloads.html
 Goto Download older versions and select version 1.9.5
 
+### Download and install EB solys
+
 ### Install required vagrant plug-ins
 * open a command line and install following plugins, with:
 * vagrant plugin install vagrant-hosts
@@ -50,7 +52,7 @@ You finally should see s.th. like this:
 * Launch EB solys
 * Add a new connection with IP = *192.168.2.4* and Port *1234*
 * connect
-* Open, e.g. trace.logfjs.*
+* Open channel folder trace.log4j to monitor the application logs
 
 ### Troubleshooting
 
