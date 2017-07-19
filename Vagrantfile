@@ -81,6 +81,8 @@ Vagrant.configure("2") do |config|
 
    config.vm.provision "file", source: "unversioned", destination: "/home/ubuntu/"
 
+   config.vm.provision "file", source: "ta", destination: "/home/ubuntu/"
+
    # set display resolution
    # config.vm.provision "shell", inline: "sudo git clone https://github.com/kbirken/franca-musicplayer-example"
    config.vm.provision :shell, path: "install_dep.sh"
