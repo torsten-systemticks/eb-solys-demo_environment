@@ -10,6 +10,7 @@ https://www.vagrantup.com/downloads.html
 Goto Download older versions and select version 1.9.5
 
 ### Install required vagrant plug-ins
+* open a command line and install following plugins, with:
 * vagrant plugin install vagrant-hosts
 * vagrant plugin install vagrant-share
 * vagrant plugin install vagrant-vbguest
@@ -17,11 +18,10 @@ Goto Download older versions and select version 1.9.5
 
 ### Create and run the virtual machine
 
-* Clone this git repository into a folder of your choice
+* Clone or (download and extract) this git repository into a folder of your choice
 * Open a shell/commmand line and move to this folder then
-* Run vagrant up
+* Run "vagrant up && vagrant reload"
 * The very first installation could take some minutes, since the virtual machine is built from scratch
-* If the virtual machine does not start up in GUI mode, just ender "vagrant reload"
 
 ### Run the demo app
 
