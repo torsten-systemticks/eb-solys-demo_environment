@@ -17,10 +17,12 @@ sudo $SERVER index.js &
 
 sleep 2s
 
+TA_BIN_DIR=/home/ubuntu/ta_binary
 echo "Go to the TA directory"
-cd /home/ubuntu/ta_binary
+cd $TA_BIN_DIR
+sudo chmod 777 $TA_BIN_DIR
 
-export LD_LIBRARY_PATH=.
+export LD_LIBRARY_PATH=$TA_BIN_DIR:$TA_BIN_DIR/lib
 
 TA=solys-agent
 
