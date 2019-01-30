@@ -18,7 +18,7 @@ sudo $SERVER index.js &
 sleep 2s
 
 echo "Go to the TA directory"
-cd /home/ubuntu/development/target-agent/ta_binary
+cd /home/ubuntu/ta_binary
 
 export LD_LIBRARY_PATH=.
 
