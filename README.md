@@ -2,12 +2,11 @@
 
 ## Prerequisites
 
-### Download and install Virtual Box (tested with version 5.1.22)
+### Download and install Virtual Box (tested with version 6.0)
 https://www.virtualbox.org/wiki/Downloads
 
-### Download and install Vagrant (tested with version 1.9.5)
+### Download and install Vagrant (tested with version 2.2.2)
 https://www.vagrantup.com/downloads.html
-Goto Download older versions and select version 1.9.5
 
 ### Install required vagrant plug-ins
 * open a command line and install following plugins, with:

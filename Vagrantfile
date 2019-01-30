@@ -26,6 +26,8 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
   # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8180, host: 8180
+  config.vm.network "forwarded_port", guest: 8181, host: 8181
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
@@ -79,17 +81,9 @@ Vagrant.configure("2") do |config|
    # Client/Server infrastructure for Musicplayer Application
    config.vm.provision "shell", inline: "sudo apt-get -y install nodejs npm nodejs-legacy firefox gedit"
 
-   config.vm.provision "file", source: "unversioned", destination: "/home/ubuntu/"
-
-   config.vm.provision "file", source: "ta", destination: "/home/ubuntu/"
-
-   # set display resolution
-   # config.vm.provision "shell", inline: "sudo git clone https://github.com/kbirken/franca-musicplayer-example"
-   config.vm.provision :shell, path: "install_dep.sh"
-
-  # config.vm.provision "file", source: "start_app.sh", destination: "/home/ubuntu/start_app.sh"
-
-
+   #config.vm.provision "shell", inline: "sudo git clone https://github.com/torsten-systemticks/franca-musicplayer-example ."
+   config.vm.provision :shell, path: "install.sh"
+	  
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
