@@ -27,7 +27,7 @@ https://www.vagrantup.com/downloads.html
 You can download the latest release from here: https://github.com/Elektrobit/eb-solys/releases
 Read the main page for detailed how-to documentation: https://github.com/Elektrobit/eb-solys
 
-### Run the server
+### Run the Musicplayer Service together with the target agent
 
 * Run the virtual machine with "vagrant up" if not already running
   * Open a shell
@@ -35,21 +35,11 @@ Read the main page for detailed how-to documentation: https://github.com/Elektro
   * ./startAll.sh
   * (you can also shut it down with ./stopAll.sh)
 
-### Run the client
-  * Open firefox
-  * Enter "localhost:8180" as URL
-  * Enter a title and press "Find"
-
-You finally should see s.th. like this:
-
-![Alt text](/doc/vm_screenshot.png?raw=true "Screenshot from application")
-
-### Connect with EB solys
-
-* Launch EB solys
-* Add a new connection with IP = *192.168.2.4* and Port *1234*
-* connect
-* Open channel folder trace.log4j to monitor the application logs
+### Run the Musicplayer Client within EB solys
+  * Launch EB solys
+  * Import the two scripts located in eb_solys_scripts
+  * Run script MusicplayerClient (this creates the built-in Musicplayer Client, as embedded browser)
+  * Run script ContractCheckCallback (this connects to your VM)
 
 ### Troubleshooting
 
