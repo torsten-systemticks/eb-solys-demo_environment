@@ -24,20 +24,15 @@ https://www.vagrantup.com/downloads.html
 
 ### Download and install EB solys
 
-### Run the demo app
+### Run the server
 
 * Run the virtual machine with "vagrant up" if not already running
-* Run the server
   * Open a shell
-  * cd /home/ubuntu/franca-musicplayer-example/org.franca.examples.musicplayer/server_nodejs
-  * sudo node index.js
+  * cd /home/ubuntu/shell_scripts
+  * ./startAll.sh
+  * (you can also shut it down with ./stopAll.sh)
 
-* Run the target agent
-  * Open a shell
-  * cd /home/ubuntu/ta/install
-  * sudo ./solys-agent
-
-* Run the client
+### Run the client
   * Open firefox
   * Enter "localhost:8180" as URL
   * Enter a title and press "Find"
