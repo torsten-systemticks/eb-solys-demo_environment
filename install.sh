@@ -25,6 +25,7 @@ if [ ! -d  $TA_DIR_SRC ]; then
 	cmake $TA_DIR_SRC -DTA_PLUGIN_log4j-plugin=true -DTA_PLUGIN_socket-reader-plugin=true -DTA_PLUGIN_resource-monitor-plugin=true -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX=$TA_DIR_BINARY
 	make all
 	make install	
+	sudo cp /vagrant/ta_config/conf.xml $TA_DIR_BINARY
 fi
 
 
