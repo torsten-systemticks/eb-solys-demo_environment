@@ -46,7 +46,7 @@ class ContractCheckCallback
 	 */
     @Execute(context=ExecutionContext.CALLBACK, description="Run Franca Contract Checker for Musicplayer Example")
 	def execute(List<RuntimeEvent<?>> events) {
-    	events.filter[channelName.equals('ipc.wamp.musicplayer')].forEach[
+    	events.filter[channelName.equals('ipc.MusicplayerStub')].forEach[
     		decode.checkIsValidCall
     	]
 	}
@@ -149,7 +149,9 @@ class ContractCheckCallback
 		val currentState = ch.events.sortBy[timestamp].last.decode
 					
 		val matches = currentState.getFirstNode('transitions').children.filter[
-			getFirstValue('type').equals(traceMsgType) && getFirstValue('message').equals(trace.getFirstValue('method'))
+			getFirstValue('type').equals(traceMsgType) && getFirstValue('message').equals(
+				trace.getFirstNode('method').getFirstValue("name")
+			)
 		]
 								
 		switch (matches.size)
