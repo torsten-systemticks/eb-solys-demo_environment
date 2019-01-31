@@ -24,6 +24,9 @@ https://www.vagrantup.com/downloads.html
 
 ### Download and install EB solys
 
+You can download the latest release from here: https://github.com/Elektrobit/eb-solys/releases
+Read the main page for detailed how-to documentation: https://github.com/Elektrobit/eb-solys
+
 ### Run the server
 
 * Run the virtual machine with "vagrant up" if not already running
